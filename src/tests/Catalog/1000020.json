@@ -1,0 +1,208 @@
+{
+  "catalogItem": {
+    "ns": "catalog/ext/test-org/actor/data-trader",
+    "name": "データ取引組織",
+    "_code": {
+      "_value": 1000020,
+      "_ver": 1
+    },
+    "inherit": {
+      "_value": 38,
+      "_ver": 1
+    },
+    "description": "データ取引組織の定義です。"
+  },
+  "template": {
+    "_code": {
+      "_value": 1000020,
+      "_ver": 1
+    },
+    "breakaway-flg": false,
+    "category": null,
+    "consumer-alliance": [
+      {
+        "_value": 1000114,
+        "_ver": 1
+      }
+    ],
+    "information-site": "",
+    "main-block": {
+      "_value": 1000109,
+      "_ver": 1
+    },
+    "other-block": null,
+    "region-root-alliance": [
+      {
+        "_value": 1000002,
+        "_ver": 1
+      }
+    ],
+    "statement": [
+      {
+        "title": "組織ステートメント",
+        "section": [
+          {
+            "title": "ご挨拶",
+            "content": [
+              {
+                "sentence": "データ取引組織のステートメントです。"
+              }
+            ]
+          },
+          {
+            "title": "事業概要",
+            "content": [
+              {
+                "sentence": "データ取引組織の事業概要です。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "status": [
+      {
+        "status": "certified",
+        "by": {
+          "_value": 1000001,
+          "_ver": 1
+        },
+        "at": "2020-01-01T00:00:00.000+0900"
+      }
+    ]
+  },
+  "prop": [
+    {
+      "key": "breakaway-flg",
+      "type": {
+        "of": "boolean",
+        "cmatrix": null
+      },
+      "description": "離脱フラグ"
+    },
+    {
+      "key": "category",
+      "type": {
+        "of": "code[]",
+        "cmatrix": null,
+        "candidate": {
+          "ns": [
+            "catalog/model/category/share/actor",
+            "catalog/built_in/category/share/actor",
+            "catalog/ext/test-org/category/share/actor",
+            "catalog/model/category/supply/actor",
+            "catalog/built_in/category/supply/actor",
+            "catalog/ext/test-org/category/supply/actor"
+          ],
+          "_code": null,
+          "base": null
+        }
+      },
+      "description": null
+    },
+    {
+      "key": "consumer-alliance",
+      "type": {
+        "of": "code[]",
+        "cmatrix": null,
+        "candidate": {
+          "ns": null,
+          "_code": null,
+          "base": {
+            "_value": 37,
+            "_ver": 1
+          }
+        }
+      },
+      "description": "提携しているデータコンシューマーコード配列"
+    },
+    {
+      "key": "information-site",
+      "type": {
+        "of": "string",
+        "cmatrix": null,
+        "format": null,
+        "unit": null,
+        "candidate": null
+      },
+      "description": "情報サイト"
+    },
+    {
+      "key": "main-block",
+      "type": {
+        "of": "code",
+        "cmatrix": null,
+        "candidate": {
+          "ns": null,
+          "_code": null,
+          "base": {
+            "_value": 29,
+            "_ver": 1
+          }
+        }
+      },
+      "description": "アクター参加時に割り当てられたPXR-Block"
+    },
+    {
+      "key": "other-block",
+      "type": {
+        "of": "code[]",
+        "cmatrix": null,
+        "candidate": {
+          "ns": null,
+          "_code": null,
+          "base": {
+            "_value": 29,
+            "_ver": 1
+          }
+        }
+      },
+      "description": "他アクターから引き継いだPXR-Blockの配列"
+    },
+    {
+      "key": "region-root-alliance",
+      "type": {
+        "of": "code[]",
+        "cmatrix": null,
+        "candidate": {
+          "ns": null,
+          "_code": null,
+          "base": {
+            "_value": 49,
+            "_ver": 1
+          }
+        }
+      },
+      "description": "提携している領域運営サービスプロバイダーコード配列"
+    },
+    {
+      "key": "statement",
+      "type": {
+        "of": "item[]",
+        "cmatrix": null,
+        "candidate": {
+          "ns": null,
+          "_code": [
+            {
+              "_value": 61,
+              "_ver": 1
+            }
+          ],
+          "base": null
+        }
+      },
+      "description": "組織ステートメント"
+    },
+    {
+      "key": "status",
+      "type": {
+        "of": "inner[]",
+        "inner": "CertStatus",
+        "cmatrix": null,
+        "candidate": null
+      },
+      "description": "認定の履歴"
+    }
+  ],
+  "attribute": null
+}

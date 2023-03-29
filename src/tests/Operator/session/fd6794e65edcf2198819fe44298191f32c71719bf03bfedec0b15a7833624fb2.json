@@ -1,0 +1,24 @@
+{
+    "sessionId": "fd6794e65edcf2198819fe44298191f32c71719bf03bfedec0b15a7833624fb2",
+    "operatorId": 3,
+    "type": 3,
+    "loginId": "application_member02",
+    "lastLoginAt": "2020-02-18 18:07:55.906",
+    "attributes": {
+      "initialPasswordExpire": "2020-04-01 00:00:00.000"
+    },
+    "roles": [
+      {
+        "_value": "43",
+        "_ver": "1"
+      }
+    ],
+    "block": {
+      "_value": 1000112,
+      "_ver": 1
+    },
+    "actor": {
+      "_value": 1000004,
+      "_ver": 1
+    }
+  }

@@ -1,0 +1,16 @@
+{
+    "operatorService": {
+        "postIdentifyCode": "http://localhost:3000/operator/identifyCode"
+    },
+    "catalogService": {
+        "getCatalogName": "http://localhost:3001/catalog/name"
+    },
+    "sms": {
+        "countryCode": "+81-"
+    },
+    "code": {
+        "phoneNumber": 30036
+    },
+    "redirectUrl": "https://localhost:3007/personal-portal/enter-code/?identifyCode=%s",
+    "grobalSettingNs": "catalog/ext/aaa-healthcare-consortium/setting/global"
+}

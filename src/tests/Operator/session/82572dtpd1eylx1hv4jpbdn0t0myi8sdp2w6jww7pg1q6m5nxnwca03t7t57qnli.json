@@ -1,0 +1,25 @@
+{
+  "sessionId": "82572dtpd1eylx1hv4jpbdn0t0myi8sdp2w6jww7pg1q6m5nxnwca03t7t57qnli",
+  "operatorId": 2,
+  "type": 0,
+  "loginId": "personal_member06",
+  "pxrId": "personal_member06",
+  "lastLoginAt": "2020-02-18 18:04:01.051",
+  "attributes": {
+    "initialPasswordExpire": "2020-04-01 00:00:00.000"
+  },
+  "roles": [
+    {
+      "_value": "1",
+      "_ver": "1"
+    }
+  ],
+  "block": {
+    "_value": 1000111,
+    "_ver": 1
+  },
+  "actor": {
+    "_value": 1000005,
+    "_ver": 1
+  }
+}

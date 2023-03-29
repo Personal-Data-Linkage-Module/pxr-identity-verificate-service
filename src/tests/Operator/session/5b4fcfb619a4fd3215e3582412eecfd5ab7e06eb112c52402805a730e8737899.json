@@ -1,0 +1,24 @@
+{
+    "sessionId": "5b4fcfb619a4fd3215e3582412eecfd5ab7e06eb112c52402805a730e8737899",
+    "operatorId": 3,
+    "type": 3,
+    "loginId": "application_member01",
+    "lastLoginAt": "2020-02-18 18:07:55.906",
+    "attributes": {
+      "initialPasswordExpire": "2020-04-01 00:00:00.000"
+    },
+    "roles": null,
+    "auth": {
+        "book": {
+            "create": true
+        }
+    },
+    "block": {
+      "_value": 1011111,
+      "_ver": 1
+    },
+    "actor": {
+      "_value": 1000005,
+      "_ver": 1
+    }
+  }

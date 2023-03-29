@@ -1,0 +1,62 @@
+{
+    "pxrId": "personal_member1",
+    "identification": [
+      {
+        "template": {
+          "_code": {
+            "_value": "30001",
+            "_ver": 1
+          },
+          "item-group": [
+            {
+              "title": "氏名",
+              "item": [
+                {
+                  "title": "姓",
+                  "type": {
+                    "_value": 30019,
+                    "_ver": 1
+                  },
+                  "content": "サンプル"
+                },
+                {
+                  "title": "名",
+                  "type": {
+                    "_value": 30020,
+                    "_ver": 1
+                  },
+                  "content": "太郎"
+                }
+              ]
+            },
+            {
+              "title": "性別",
+              "item": [
+                {
+                  "title": "性別",
+                  "type": {
+                    "_value": 30021,
+                    "_ver": 1
+                  },
+                  "content": "男"
+                }
+              ]
+            },
+            {
+              "title": "生年月日",
+              "item": [
+                {
+                  "title": "生年月日",
+                  "type": {
+                    "_value": 30022,
+                    "_ver": 1
+                  },
+                  "content": "2000-01-01"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }

@@ -1,0 +1,30 @@
+{
+  "sessionId": "9047a6a73a6c8f952fe73678d84c2684892921bbdbd3a10fe910a7a8d3bb5aa5",
+  "operatorId": 2,
+  "type": 0,
+  "loginId": "personal_member02",
+  "pxrId": "personal_member02",
+  "lastLoginAt": "2020-02-18 18:04:01.051",
+  "attributes": {
+    "initialPasswordExpire": "2020-04-01 00:00:00.000"
+  },
+  "roles": [
+    {
+      "_value": "1",
+      "_ver": "1"
+    }
+  ],
+  "auth": {
+      "book": {
+          "create": true
+      }
+  },
+  "block": {
+    "_value": 1000111,
+    "_ver": 1
+  },
+  "actor": {
+    "_value": 1000001,
+    "_ver": 1
+  }
+}

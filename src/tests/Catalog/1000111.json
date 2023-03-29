@@ -1,0 +1,90 @@
+{
+    "catalogItem": {
+      "ns": "catalog/ext/test-org/block/region-root",
+      "name": "Region-Root-Block",
+      "_code": {
+        "_value": "1000111",
+        "_ver": "1"
+      },
+      "inherit": {
+        "_value": "34",
+        "_ver": null
+      },
+      "description": "領域運営サービスプロバイダー用PXR-Blockの定義です。"
+    },
+    "template": {
+      "_code": {
+        "_value": "1000111",
+        "_ver": "1"
+      },
+      "actor-type": "region-root",
+      "assigned-organization": "organization",
+      "assignment-status": "assigned",
+      "base-url": "localhost",
+      "id": "Region-Root-01"
+    },
+    "prop": [
+      {
+        "key": "actor-type",
+        "type": {
+          "of": "string",
+          "format": null,
+          "unit": null,
+          "candidata": {
+            "value": [
+              "pxr-root",
+              "region-root",
+              "app",
+              "wf",
+              "data-trader",
+              "consumer"
+            ]
+          }
+        },
+        "description": "このPXR-Blockを保有する組織の種別"
+      },
+      {
+        "key": "assigned-organization",
+        "type": {
+          "of": "string",
+          "format": null,
+          "unit": null
+        },
+        "description": "割当アクター名"
+      },
+      {
+        "key": "assignment-status",
+        "type": {
+          "of": "string",
+          "format": null,
+          "unit": null,
+          "candidata": {
+            "value": [
+              "assigned",
+              "unassigned"
+            ]
+          }
+        },
+        "description": "割当状態"
+      },
+      {
+        "key": "base-url",
+        "type": {
+          "of": "string",
+          "format": null,
+          "unit": null
+        },
+        "description": "PXR-BlockのベースURL"
+      },
+      {
+        "key": "id",
+        "type": {
+          "of": "string",
+          "format": null,
+          "unit": null
+        },
+        "description": "PXR-Block識別子"
+      }
+    ],
+    "attribute": null
+  }

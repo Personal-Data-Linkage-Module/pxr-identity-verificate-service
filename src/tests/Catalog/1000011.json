@@ -1,0 +1,62 @@
+{
+    "catalogItem": {
+      "ns": "catalog/ext/test-org/actor/region-root/actor_1000020/region",
+      "name": "テスト用リージョンルートA",
+      "_code": {
+        "_value": "1000011",
+        "_ver": "1"
+      },
+      "inherit": {
+        "_value": "46",
+        "_ver": null
+      },
+      "description": "テスト用リージョンルートAの定義です。"
+    },
+    "template": {
+      "_code": {
+        "_value": "1000011",
+        "_ver": "1"
+      },
+      "share": null,
+      "store": [
+        {
+          "_value": 1000006,
+          "_ver": 1
+        }
+      ],
+      "status": "open"
+    },
+    "prop": [
+      {
+        "key": "share",
+        "type": {
+          "of": "code[]",
+          "candidate": {
+            "ns": null,
+            "_code": null,
+            "base": {
+              "_value": "45",
+              "_ver": "1"
+            }
+          }
+        },
+        "description": "ワークフローが提供する状態共有機能の定義"
+      },
+      {
+        "key": "store",
+        "type": {
+          "of": "code[]",
+          "candidate": {
+            "ns": null,
+            "_code": null,
+            "base": {
+              "_value": "44",
+              "_ver": "1"
+            }
+          }
+        },
+        "description": "ワークフローが蓄積可能なデータの定義"
+      }
+    ],
+    "attribute": null
+  }

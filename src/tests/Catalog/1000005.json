@@ -1,0 +1,167 @@
+{
+    "catalogItem": {
+      "ns": "catalog/ext/test-org/actor/app",
+      "name": "テスト用アプリケーション",
+      "_code": {
+        "_value": "1000005",
+        "_ver": "1"
+      },
+      "inherit": {
+        "_value": "47",
+        "_ver": "1"
+      },
+      "description": "テスト用アプリケーションです"
+    },
+    "template": {
+      "_code": {
+        "_value": "1000005",
+        "_ver": "1"
+      },
+      "category": null,
+      "main-block": {
+        "_value": 1000112,
+        "_ver": 1
+      },
+      "other-block": null,
+      "region-alliance": [
+        {
+          "_value": 1000003,
+          "_ver": 1
+        }
+      ],
+      "statement": [
+        {
+          "title": "組織ステートメント",
+          "section": {
+            "title": "ご挨拶",
+            "content": {
+              "sentence": "テスト用アプリケーションのステートメントです。"
+            }
+          }
+        }
+      ],
+      "status": [
+        {
+          "status": "certified",
+          "by": {
+            "_value": 1000001,
+            "_ver": 1
+          },
+          "at": "20200101T000000.000+0900"
+        }
+      ],
+      "application": [
+        {
+          "_value": 1000008,
+          "_ver": 1
+        }
+      ]
+    },
+    "prop": [
+      {
+        "key": "category",
+        "type": {
+          "of": "code[]",
+          "candidate": {
+            "ns": [
+              "catalog/ext/test-org/category/supply/actor",
+              "catalog/built_in/category/supply/actor",
+              "catalog/model/category/supply/actor",
+              "catalog/ext/test-org/category/share/actor",
+              "catalog/built_in/category/share/actor",
+              "catalog/model/category/share/actor"
+            ],
+            "_code": null,
+            "base": null
+          }
+        },
+        "description": null
+      },
+      {
+        "key": "main-block",
+        "type": {
+          "of": "code",
+          "candidate": {
+            "ns": null,
+            "_code": null,
+            "base": {
+              "_value": "29",
+              "_ver": null
+            }
+          }
+        },
+        "description": "アクター参加時に割り当てられたPXR-Block"
+      },
+      {
+        "key": "other-block",
+        "type": {
+          "of": "code[]",
+          "candidate": {
+            "ns": null,
+            "_code": null,
+            "base": {
+              "_value": "29",
+              "_ver": null
+            }
+          }
+        },
+        "description": "他アクターから引き継いだPXR-Blockの配列"
+      },
+      {
+        "key": "region-alliance",
+        "type": {
+          "of": "code[]",
+          "candidate": {
+            "ns": null,
+            "_code": null,
+            "base": {
+              "_value": "48",
+              "_ver": "1"
+            }
+          }
+        },
+        "description": "参加している領域運営サービスプロバイダーコード配列"
+      },
+      {
+        "key": "statement",
+        "type": {
+          "of": "item[]",
+          "candidate": {
+            "ns": null,
+            "_code": [
+              {
+                "_value": "61",
+                "_ver": "1"
+              }
+            ],
+            "base": null
+          }
+        },
+        "description": "組織ステートメント"
+      },
+      {
+        "key": "status",
+        "type": {
+          "of": "inner[]",
+          "inner": "CertStatus"
+        },
+        "description": "認定の履歴"
+      },
+      {
+        "key": "workflow",
+        "type": {
+          "of": "code[]",
+          "candidate": {
+            "ns": null,
+            "_code": null,
+            "base": {
+              "_value": "46",
+              "_ver": "1"
+            }
+          }
+        },
+        "description": "ワークフロー定義の配列"
+      }
+    ],
+    "attribute": null
+  }
