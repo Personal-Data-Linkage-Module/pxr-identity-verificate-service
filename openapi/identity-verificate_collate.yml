@@ -1,0 +1,112 @@
+post:
+  tags:
+    - "本人性確認コード照合"
+  summary: 本人性確認コードを照合する
+  description: |
+    ## API概要
+    本人性確認コードの値と有効権限を照合し、一致有無の結果を返却する
+    
+    ### 【認可条件】
+    - 個人もしくは流通制御SPの運営メンバー、領域運営SPの運営メンバー、アプリケーションPの運営メンバー、アプリケーションであること
+    
+    ### （注意事項）
+    本人性確認コード照合の要求オブジェクト
+    - 本人性確認コードは、以下のAPIで取得できる。  
+    POST /identity-verificate/code/
+  requestBody:
+    description: 本人性確認コード照合APIの要求オブジェクト
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/PostCollateReqDto"
+        examples:
+          "RequestBody Example":
+            $ref: "#/components/examples/PostCollateReqExample"
+  responses:
+    200:
+      description: 本人性確認コード照合の応答オブジェクト 
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PostCollateResDto"
+          examples:
+            "Response Example":
+              $ref: "#/components/examples/PostCollateResExample"
+components:
+  schemas:
+    CodeObject:
+      description: カタログコード
+      type: object
+      properties:
+        _value:
+          description: カタログコード値
+          type: number
+        _ver:
+          description: カタログバージョン値
+          type: number
+    PostCollateReqDto:
+      description: 本人性確認コード照会APIの要求オブジェクト
+      type: object
+      properties:
+        identifyCode:
+          description: 本人性確認コード
+          type: string
+        path:
+          description: 照合先URLの引数となる有効期限付きパスコード
+          type: string
+      required:
+        - "identifyCode"
+    PostCollateResDto:
+      description: 本人性確認コード照会APIの応答オブジェクト
+      type: object
+      properties:
+        pxrId:
+          description: PxR-ID
+          type: string
+        userId:
+          description: 利用者ID
+          type: string
+        actor:
+          description: アクターカタログ
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        region:
+          description: Regionカタログ
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        app:
+          description: アプリケーションカタログ
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        wf:
+          description: ※未使用のパラメータです
+          deprecated: true
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+  examples:
+    PostCollateReqExample:
+      value:
+        identifyCode: ODNlYTEzMmQtY2VkMS00NDhlLTg2YjktYWEyZGNlMzlkZDhk
+        path: ZTEzMWMzZWUtNjdjMi00NWUzLTk2ZDgtYjlhNDFhZDgxZWM5
+      description: |
+        - identifyCode の値は, [ POST: /code ] で返却された identifyCode の値を使用する
+        - path の値は, [ POST: /url/issue ] で返却された url 中のパスコードの値を使用する
+    PostCollateResExample:
+      value:
+        pxrId: pxr-1
+        userId: user-1
+        actor: 
+          _value: 1000101
+          _ver: 1
+        region: 
+          _value: 1000102
+          _ver: 2
+        app: 
+          _value: 1000103
+          _ver: 3
+      description: |
+        - userId の値は, [ POST: /url/issue ] の RequestBody で指定した userId の値が返却される
+        - actor の値は, [ POST: /code ] の RequestBody で指定した actor の値が返却される
+        - region の値は, [ POST: /code ] の RequestBody で指定した region の値が返却される
+        - app の値は, [ POST: /code ] の RequestBody で指定した appの値が返却される

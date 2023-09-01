@@ -1,0 +1,70 @@
+post:
+  tags:
+    - "本人性確認コード照合先URL発行"
+  summary: "本人性確認コード照合先のURLを発行する"
+  description: |
+    ## API概要
+    本人性確認を行うUIのURLを発行します。
+    
+    ### 【認可条件】
+    アプリケーションであること
+    
+    ### （注意事項）
+    API実行前にアプリケーションへログインしていること
+  requestBody:
+    description: 本人性確認コード照合先URL発行の要求オブジェクト
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/PostUrlReqDto"
+        examples:
+          "RequestBody Example":
+            $ref: "#/components/examples/PostUrlReqExample"
+  responses:
+    200:
+      description: 本人性確認コード発行の応答オブジェクト
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PostUrlResDto"
+          examples:
+            "本人性確認コード照合先URLの構成":
+              $ref: "#/components/examples/PostUrlResExample"
+components:
+  schemas:
+    PostUrlReqDto:
+      description: 本人性確認コード照合先URL発行の応答オブジェクト
+      type: object
+      required:
+        - "userId"
+        - "urlType"
+      properties:
+        userId: 
+          description: |
+            - 利用者ID
+          type: string 
+        urlType: 
+          description: | 
+            - 発行URL種別
+              - 1: アクター
+          type: number
+    PostUrlResDto:
+      description: 本人性確認コード発行APIの応答オブジェクト
+      type: object
+      properties:
+        url:
+          description: 本人性確認コード照合先URL
+          type: string
+  examples:
+    PostUrlReqExample:
+      value:
+        userId: user-1
+        urlType: 1
+    PostUrlResExample:
+      description: |
+        - 本人性確認コード照合先URLの構成
+          - identifyCode の値は, パスコードであり本人性確認コードではない
+          - identifyCode の値は, [ POST: /collate ] の RequestBody である path の値として利用する
+      value: 
+        url: https://root-block-url/personal-portal/enter-code/?identifyCode=ZTEzMWMzZWUtNjdjMi00NWUzLTk2ZDgtYjlhNDFhZDgxZWM5

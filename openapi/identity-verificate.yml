@@ -1,0 +1,23 @@
+openapi: '3.0.2'
+info:
+  title: pxr-identity-verificate-service
+  version: '1.0'
+  description: |
+    ## サービス概要
+    本人性確認に必要な処理を一括して行うサービスです。
+    第三者および本人による照合、確認書類の登録などのAPIを提供します。
+
+    ### （注意事項）
+  license:
+    name: MIT
+    url: https://licenses.opensource.jp/MIT/MIT.html
+servers:
+  - url: "/identity-verificate"
+paths:
+  /code:
+    $ref: "identity-verificate_code.yml"
+  /url/issue:
+    $ref: "identity-verificate_url_issue.yml"
+  /collate:
+    $ref: "identity-verificate_collate.yml"
+

@@ -1,0 +1,125 @@
+post:
+  tags:
+    - "本人性確認コード発行"
+  summary: "本人性確認コードを発行する"
+  description: |
+    ## API概要
+    
+    ### 【認可条件】
+    運営メンバーもしくは個人であること
+    
+    ### （注意事項）
+  requestBody:
+    description: 本人性確認コード発行の要求オブジェクト
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "#/components/schemas/PostCodeReqDto"
+        examples:
+          "RequestBody Example":
+            $ref: "#/components/examples/PostCodeReqExample"
+  responses:
+    200:
+      description: 本人性確認コード発行の応答オブジェクト
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/PostCodeResDto"
+          examples:
+            "Responses Example":
+              $ref: "#/components/examples/PostCodeResExample"
+components:
+  schemas:
+    CodeObject:
+      description: カタログコード
+      type: object
+      properties:
+        _value:
+          description: カタログコード値
+          type: number
+        _ver:
+          description: カタログバージョン値
+          type: number
+    PostCodeReqDto:
+      description: 本人性確認コード発行の要求オブジェクト
+      type: object
+      properties:
+        actor:
+          description: アクターカタログ
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        region:
+          description: Regionカタログ
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        app:
+          description: アプリケーションカタログ
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        wf:
+          description: ※未使用のパラメータです
+          deprecated: true
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+    PostCodeResDto:
+      description: 本人性確認コード発行APIの応答オブジェクト
+      type: object
+      properties:
+        identifyCode:
+          description: | 
+            - 本人性確認コード
+            - Base64
+          type: string
+        actor:
+          description: アクターカタログ
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        region: 
+          description: Regionカタログ
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        app:
+          description: アプリケーションカタログ
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        wf:
+          description: ※未使用のパラメータです
+          deprecated: true
+          oneOf:
+            - $ref: "#/components/schemas/CodeObject"
+        expireAt:
+          description: 有効期限
+          type: string
+          format: date-time
+  examples:
+    PostCodeReqExample:
+      value:
+        actor: 
+          _value: 1000101
+          _ver: 1
+        region: 
+          _value: 1000102
+          _ver: 2
+        app: 
+          _value: 1000103
+          _ver: 3
+    PostCodeResExample:
+      value:
+        identifyCode: ODNlYTEzMmQtY2VkMS00NDhlLTg2YjktYWEyZGNlMzlkZDhk
+        actor: 
+          _value: 1000101
+          _ver: 1
+        region: 
+          _value: 1000102
+          _ver: 2
+        app: 
+          _value: 1000103
+          _ver: 3
+        expireAt: 2023-06-19T14:50:01.339+0900
+      description: |
+        - 本人性確認コードは, [ POST: /url/issue ] の RequestBody である identifyCode の値として利用される
+        - ientifyCode の値は, Base64 でエンコードされた値である
+        - actor の値は, [ POST: /code ] の RequestBody で指定した actor の値が返却される
+        - region の値は, [ POST: /code ] の RequestBody で指定した region の値が返却される
+        - app の値は, [ POST: /code ] の RequestBody で指定した appの値が返却される
