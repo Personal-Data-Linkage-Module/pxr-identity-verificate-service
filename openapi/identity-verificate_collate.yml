@@ -11,8 +11,9 @@ post:
     
     ### （注意事項）
     本人性確認コード照合の要求オブジェクト
-    - 本人性確認コードは、以下のAPIで取得できる。  
-    POST /identity-verificate/code/
+    - 本人性確認コードは, [ POST /code ] API で取得できる
+    - パスコードは, [ POST /url/issue ] API で取得できる
+    
   requestBody:
     description: 本人性確認コード照合APIの要求オブジェクト
     required: true

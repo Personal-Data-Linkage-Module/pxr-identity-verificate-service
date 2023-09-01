@@ -67,9 +67,7 @@ components:
       type: object
       properties:
         identifyCode:
-          description: | 
-            - 本人性確認コード
-            - Base64
+          description: 本人性確認コード (Base64)
           type: string
         actor:
           description: アクターカタログ
@@ -118,7 +116,7 @@ components:
           _ver: 3
         expireAt: 2023-06-19T14:50:01.339+0900
       description: |
-        - 本人性確認コードは, [ POST: /url/issue ] の RequestBody である identifyCode の値として利用される
+        - 本人性確認コードは, [ POST: /collate ] の RequestBody である identifyCode の値として利用される
         - ientifyCode の値は, Base64 でエンコードされた値である
         - actor の値は, [ POST: /code ] の RequestBody で指定した actor の値が返却される
         - region の値は, [ POST: /code ] の RequestBody で指定した region の値が返却される

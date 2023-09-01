@@ -65,6 +65,6 @@ components:
       description: |
         - 本人性確認コード照合先URLの構成
           - identifyCode の値は, パスコードであり本人性確認コードではない
-          - identifyCode の値は, [ POST: /collate ] の RequestBody である path の値として利用する
+          - identifyCode の値は, [ POST: /collate ] の RequestBody である path の値として利用される
       value: 
         url: https://root-block-url/personal-portal/enter-code/?identifyCode=ZTEzMWMzZWUtNjdjMi00NWUzLTk2ZDgtYjlhNDFhZDgxZWM5
