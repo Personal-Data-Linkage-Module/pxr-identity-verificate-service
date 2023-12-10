@@ -20,9 +20,9 @@ import { IsString, IsNumber } from 'class-validator';
 export default class PostUrlIssueReqDto {
     // 利用者ID
     @IsString()
-    userId: string = '';
+        userId: string = '';
 
     // URLタイプ
     @IsNumber()
-    urlType: number = null;
+        urlType: number = null;
 }

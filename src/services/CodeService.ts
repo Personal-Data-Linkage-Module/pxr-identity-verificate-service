@@ -380,7 +380,7 @@ export default class CodeService {
         }
 
         // 利用者ID連携済か確認する
-        var { isCoopRequest, bookManage, isCoop } = await CodeService.checkCoopStatusForPostCodeVerified(reqDto, operator);
+        const { isCoopRequest, bookManage, isCoop } = await CodeService.checkCoopStatusForPostCodeVerified(reqDto, operator);
 
         // configよりnsを取得して有効期限を設定する
         const catalogService = new CatalogService();

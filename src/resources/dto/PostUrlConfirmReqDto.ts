@@ -20,5 +20,5 @@ import { IsString } from 'class-validator';
 export default class PostUrlConfirmReqDto {
     // パス
     @IsString()
-    path: string = '';
+        path: string = '';
 }
