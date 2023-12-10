@@ -5,7 +5,7 @@ https://opensource.org/licenses/mit-license.php
 /* eslint-disable */
 import Application from '../index';
 import { OperatorServer2 } from './StubServer';
-import { clear, insert } from './testDatabase';
+import { clear, disconnect, insert } from './testDatabase';
 import { ResponseCode } from '../common/ResponseCode';
 /* eslint-enable */
 import Config from '../common/Config';
@@ -37,6 +37,7 @@ describe('Identification Verify Service', () => {
         await connectDatabase();
     });
     afterAll(async () => {
+        await disconnect();
         Application.stop();
         operatorServer.server.close();
     });

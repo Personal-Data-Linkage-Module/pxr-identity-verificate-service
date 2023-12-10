@@ -14,6 +14,11 @@ export async function clear () {
     `);
 }
 
+export async function disconnect () {
+    const connection = await connectDatabase();
+    await connection.destroy();
+}
+
 export async function insert () {
     const connection = await connectDatabase();
     await connection.query(`

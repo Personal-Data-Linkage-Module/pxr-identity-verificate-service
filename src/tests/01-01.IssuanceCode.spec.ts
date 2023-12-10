@@ -6,7 +6,7 @@ https://opensource.org/licenses/mit-license.php
 import * as supertest from 'supertest';
 import Application from '../index';
 import { OperatorServer, NotificationServer, NotificationServer2, CatalogServer, CatalogServer2, MyConditionBookManageServer, MyConditionBookManageServer02, MyConditionBookManageServer03, MyConditionBookManageServer04, OperatorServerPostIdentifyCodeError } from './StubServer';
-import { clear } from './testDatabase';
+import { clear, disconnect } from './testDatabase';
 import Config from '../common/Config';
 import { connectDatabase } from '../common/Connection';
 /* eslint-enable */
@@ -43,6 +43,7 @@ describe('Identification Verify Service', () => {
         await connectDatabase();
     });
     afterAll(async () => {
+        await disconnect();
         // アプリケーションの停止
         Application.stop();
         operatorServer.server.close();
