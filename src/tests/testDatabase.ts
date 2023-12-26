@@ -14,6 +14,11 @@ export async function clear () {
     `);
 }
 
+export async function disconnect () {
+    const connection = await connectDatabase();
+    await connection.destroy();
+}
+
 export async function insert () {
     const connection = await connectDatabase();
     await connection.query(`
@@ -31,7 +36,7 @@ export async function insert () {
             'personal_member01',
             '',
             0,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.06',
@@ -51,7 +56,7 @@ export async function insert () {
             'personal_member02',
             'personal_user02',
             0,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',
@@ -111,7 +116,7 @@ export async function insert () {
             'personal_member01',
             '',
             1,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',
@@ -131,7 +136,7 @@ export async function insert () {
             'personal_member02',
             '',
             1,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',
@@ -151,7 +156,7 @@ export async function insert () {
             'personal_member01',
             '',
             0,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',
@@ -191,7 +196,7 @@ export async function insert () {
             'personal_member01',
             '',
             0,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',
@@ -211,7 +216,7 @@ export async function insert () {
             'personal_member01',
             'personal_user01',
             0,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',
@@ -231,7 +236,7 @@ export async function insert () {
             'personal_member01',
             'personal_user01',
             0,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.06',
@@ -251,7 +256,7 @@ export async function insert () {
             'personal_member06',
             '',
             0,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',
@@ -271,7 +276,7 @@ export async function insert () {
             'personal_member01',
             '',
             1,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',
@@ -291,7 +296,7 @@ export async function insert () {
             'personal_member06',
             '',
             0,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',
@@ -311,7 +316,7 @@ export async function insert () {
             'personal_member01',
             '',
             2,
-            '2023-04-01 00:00:00',
+            '2500-04-01 00:00:00',
             false,
             'personal_member01',
             '2020-02-18 22:15:08.264',

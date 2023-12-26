@@ -22,10 +22,10 @@ export default class PostIndCollateReqDto {
     @IsString()
     @IsNotEmpty()
     @IsDefined()
-    identifyCode: string;
+        identifyCode: string;
 
     /** パス */
     @IsString()
     @IsOptional()
-    path: string;
+        path: string;
 }

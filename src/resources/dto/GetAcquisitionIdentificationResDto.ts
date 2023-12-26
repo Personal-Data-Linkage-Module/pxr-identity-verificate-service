@@ -30,7 +30,7 @@ export default class GetAcquisitionIdentificationResDto {
     /**
      * ワークフローカタログオブジェクト
      */
-     public wf: object = null;
+    public wf: object = null;
 
     /**
      * 本人性確認事項

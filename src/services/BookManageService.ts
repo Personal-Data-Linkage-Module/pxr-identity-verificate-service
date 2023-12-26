@@ -32,15 +32,19 @@ export default class BookManageService {
             url = String(config.get('bookManage.cooperateRequestRelease'));
         }
 
-        const region = dto.getRegionCode() ? {
-            _value: dto.getRegionCode(),
-            _ver: dto.getRegionVersion()
-        } : null;
+        const region = dto.getRegionCode()
+            ? {
+                _value: dto.getRegionCode(),
+                _ver: dto.getRegionVersion()
+            }
+            : null;
 
-        const app = dto.getAppCode() ? {
-            _value: dto.getAppCode(),
-            _ver: dto.getAppVersion()
-        } : null;
+        const app = dto.getAppCode()
+            ? {
+                _value: dto.getAppCode(),
+                _ver: dto.getAppVersion()
+            }
+            : null;
 
         // bodyを生成
         let body;
@@ -116,15 +120,19 @@ export default class BookManageService {
         // URLを生成
         const url = String(config.get('bookManage.cooperateUser'));
 
-        const region = dto.getRegionCode() ? {
-            _value: dto.getRegionCode(),
-            _ver: dto.getRegionVersion()
-        } : null;
+        const region = dto.getRegionCode()
+            ? {
+                _value: dto.getRegionCode(),
+                _ver: dto.getRegionVersion()
+            }
+            : null;
 
-        const app = dto.getAppCode() ? {
-            _value: dto.getAppCode(),
-            _ver: dto.getAppVersion()
-        } : null;
+        const app = dto.getAppCode()
+            ? {
+                _value: dto.getAppCode(),
+                _ver: dto.getAppVersion()
+            }
+            : null;
 
         // bodyを生成
         const body = JSON.stringify({

@@ -7,7 +7,7 @@ import * as supertest from 'supertest';
 import { connectDatabase } from '../common/Connection';
 import Application from '../index';
 import { OperatorServer, NotificationServer, CatalogServer, MyConditionBookManageServer } from './StubServer';
-import { clear, insert } from './testDatabase';
+import { clear, disconnect, insert } from './testDatabase';
 /* eslint-enable */
 
 // const app = new App();
@@ -41,6 +41,7 @@ describe('Identification Verify Service', () => {
         await connectDatabase();
     });
     afterAll(async () => {
+        await disconnect();
         // アプリケーションの停止
         Application.stop();
         operatorServer.server.close();

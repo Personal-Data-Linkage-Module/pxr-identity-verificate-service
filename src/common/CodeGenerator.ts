@@ -3,7 +3,7 @@ Released under the MIT license.
 https://opensource.org/licenses/mit-license.php
 */
 /* eslint-disable */
-import uuidV4 = require('uuid/v4');
+import { v4 as uuidv4 } from 'uuid';
 import { Base64 } from 'js-base64';
 /* eslint-enable */
 
@@ -11,6 +11,6 @@ import { Base64 } from 'js-base64';
  * 本人性確認コード生成
  */
 export async function identifyVerifyCode (): Promise<string> {
-    const id = uuidV4();
+    const id = uuidv4();
     return Base64.encode(id);
 }
