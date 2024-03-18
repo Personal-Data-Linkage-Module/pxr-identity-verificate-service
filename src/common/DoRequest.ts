@@ -9,6 +9,8 @@ import AppError from './AppError';
 import Config from './Config';
 /* eslint-enable */
 const Message = Config.ReadConfig('./config/message.json');
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first');
 
 /**
  * GETリクエストを実行する
